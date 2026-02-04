@@ -1,0 +1,469 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* True Lens Design System - Premium Cyber-Intelligence Aesthetic */
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 30% 25%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 220 20% 90%;
+    --accent-foreground: 220 30% 20%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 70% 50%;
+
+    --radius: 0.75rem;
+
+    /* Signal colors - Vibrant intelligence tones */
+    --signal-risk: 0 72% 51%;
+    --signal-risk-bg: 0 50% 97%;
+    --signal-risk-border: 0 50% 85%;
+    --signal-risk-glow: 0 72% 51%;
+    
+    --signal-uncertainty: 45 93% 47%;
+    --signal-uncertainty-bg: 45 70% 97%;
+    --signal-uncertainty-border: 45 60% 85%;
+    --signal-uncertainty-glow: 45 93% 47%;
+    
+    --signal-green: 152 69% 40%;
+    --signal-green-bg: 152 50% 97%;
+    --signal-green-border: 152 40% 85%;
+    --signal-green-glow: 152 69% 40%;
+    
+    /* Business risk - Electric violet */
+    --signal-business: 265 83% 57%;
+    --signal-business-bg: 265 60% 97%;
+    --signal-business-border: 265 50% 85%;
+    --signal-business-glow: 265 83% 57%;
+    
+    /* AI Insight - Electric blue */
+    --signal-ai: 217 91% 60%;
+    --signal-ai-bg: 217 70% 97%;
+    --signal-ai-border: 217 60% 85%;
+    --signal-ai-glow: 217 91% 60%;
+    
+    /* Premium card effects */
+    --card-shadow: 220 25% 75%;
+    --card-glow: 220 70% 50%;
+    --card-hover-glow: 220 80% 60%;
+    
+    /* Hero gradient */
+    --hero-gradient-from: 220 70% 50%;
+    --hero-gradient-via: 250 70% 55%;
+    --hero-gradient-to: 280 70% 55%;
+
+    /* Score colors */
+    --score-low: 152 69% 40%;
+    --score-mixed: 45 93% 47%;
+    --score-elevated: 25 95% 53%;
+    --score-high: 0 72% 51%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 220 15% 92%;
+
+    --card: 222 40% 9%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 222 40% 9%;
+    --popover-foreground: 220 15% 92%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 222 30% 18%;
+    --accent-foreground: 220 15% 90%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 30% 16%;
+    --input: 222 30% 16%;
+    --ring: 217 91% 60%;
+
+    /* Signal colors - Neon dark mode */
+    --signal-risk: 0 72% 55%;
+    --signal-risk-bg: 0 50% 12%;
+    --signal-risk-border: 0 50% 25%;
+    --signal-risk-glow: 0 72% 55%;
+    
+    --signal-uncertainty: 45 93% 50%;
+    --signal-uncertainty-bg: 45 60% 12%;
+    --signal-uncertainty-border: 45 50% 25%;
+    --signal-uncertainty-glow: 45 93% 50%;
+    
+    --signal-green: 152 69% 45%;
+    --signal-green-bg: 152 50% 12%;
+    --signal-green-border: 152 40% 25%;
+    --signal-green-glow: 152 69% 45%;
+    
+    /* Business risk - dark mode */
+    --signal-business: 265 83% 65%;
+    --signal-business-bg: 265 60% 12%;
+    --signal-business-border: 265 50% 25%;
+    --signal-business-glow: 265 83% 65%;
+    
+    /* AI Insight - Electric blue dark mode */
+    --signal-ai: 217 91% 65%;
+    --signal-ai-bg: 217 70% 12%;
+    --signal-ai-border: 217 60% 25%;
+    --signal-ai-glow: 217 91% 65%;
+    
+    /* Premium card effects - dark mode with glow */
+    --card-shadow: 222 40% 4%;
+    --card-glow: 217 91% 60%;
+    --card-hover-glow: 217 91% 70%;
+
+    /* Score colors - dark mode */
+    --score-low: 152 69% 45%;
+    --score-mixed: 45 93% 50%;
+    --score-elevated: 25 95% 55%;
+    --score-high: 0 72% 55%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 15%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 222 30% 16%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
+
+/* Premium Insight Card styling */
+@layer components {
+  .insight-card {
+    @apply relative rounded-2xl border bg-card p-5 transition-all duration-300;
+    box-shadow: 0 1px 3px 0 hsl(var(--card-shadow) / 0.1),
+                0 4px 12px -2px hsl(var(--card-shadow) / 0.08);
+  }
+  
+  .insight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--card-glow) / 0.15) 0%,
+      transparent 50%,
+      hsl(var(--card-glow) / 0.05) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  .insight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 hsl(var(--card-shadow) / 0.15),
+                0 8px 24px -4px hsl(var(--card-shadow) / 0.12);
+  }
+  
+  .dark .insight-card {
+    box-shadow: 0 0 0 1px hsl(var(--border)),
+                0 4px 20px -4px hsl(var(--card-shadow) / 0.5);
+  }
+  
+  .dark .insight-card:hover {
+    box-shadow: 0 0 0 1px hsl(var(--card-glow) / 0.3),
+                0 0 30px -8px hsl(var(--card-glow) / 0.25),
+                0 8px 32px -8px hsl(var(--card-shadow) / 0.6);
+  }
+  
+  .insight-card-header {
+    @apply flex items-center gap-3 mb-4;
+  }
+  
+  .insight-card-icon {
+    @apply flex h-10 w-10 items-center justify-center rounded-xl;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05));
+  }
+  
+  .dark .insight-card-icon {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.25), hsl(var(--primary) / 0.1));
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.3);
+  }
+  
+  /* Hero Score Card - Cinematic */
+  .hero-score-card {
+    @apply relative rounded-3xl p-6 md:p-8 overflow-hidden;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--card)) 100%
+    );
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .hero-score-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150%;
+    background: radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      hsl(var(--hero-gradient-from) / 0.12) 0%,
+      hsl(var(--hero-gradient-via) / 0.06) 40%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+  
+  .dark .hero-score-card {
+    background: linear-gradient(
+      180deg,
+      hsl(222 40% 11%) 0%,
+      hsl(222 40% 8%) 100%
+    );
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 0 0 1px hsl(var(--border)),
+                inset 0 1px 0 0 hsl(var(--card-glow) / 0.05);
+  }
+  
+  .dark .hero-score-card::before {
+    background: radial-gradient(
+      ellipse 100% 60% at 50% -20%,
+      hsl(var(--hero-gradient-from) / 0.2) 0%,
+      hsl(var(--hero-gradient-via) / 0.1) 40%,
+      transparent 70%
+    );
+  }
+  
+  .context-badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
+    @apply bg-primary/10 text-primary border border-primary/20;
+  }
+  
+  .dark .context-badge {
+    @apply bg-primary/15 border-primary/30;
+    box-shadow: 0 0 15px -3px hsl(var(--primary) / 0.2);
+  }
+  
+  .severity-badge {
+    @apply inline-flex items-center rounded-lg px-2.5 py-1 text-xs font-bold uppercase tracking-wider;
+  }
+  
+  .severity-critical {
+    @apply bg-red-600 text-white;
+    box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.5);
+  }
+  
+  .dark .severity-critical {
+    box-shadow: 0 0 15px -3px hsl(0 72% 51% / 0.5);
+  }
+  
+  .severity-high {
+    @apply bg-orange-500 text-white;
+    box-shadow: 0 0 0 1px hsl(25 95% 53% / 0.5);
+  }
+  
+  .dark .severity-high {
+    box-shadow: 0 0 15px -3px hsl(25 95% 53% / 0.5);
+  }
+  
+  .severity-medium {
+    @apply bg-yellow-500 text-yellow-950;
+    box-shadow: 0 0 0 1px hsl(45 93% 47% / 0.5);
+  }
+  
+  .severity-low {
+    @apply bg-slate-500 text-white;
+  }
+
+  /* Glowing signal cards */
+  .signal-card-risk {
+    @apply border-signal-risk-border bg-signal-risk-bg;
+  }
+  
+  .dark .signal-card-risk {
+    box-shadow: inset 0 0 30px -15px hsl(var(--signal-risk-glow) / 0.15),
+                0 0 0 1px hsl(var(--signal-risk-border));
+  }
+  
+  .signal-card-uncertainty {
+    @apply border-signal-uncertainty-border bg-signal-uncertainty-bg;
+  }
+  
+  .dark .signal-card-uncertainty {
+    box-shadow: inset 0 0 30px -15px hsl(var(--signal-uncertainty-glow) / 0.15),
+                0 0 0 1px hsl(var(--signal-uncertainty-border));
+  }
+  
+  .signal-card-green {
+    @apply border-signal-green-border bg-signal-green-bg;
+  }
+  
+  .dark .signal-card-green {
+    box-shadow: inset 0 0 30px -15px hsl(var(--signal-green-glow) / 0.15),
+                0 0 0 1px hsl(var(--signal-green-border));
+  }
+  
+  /* Action list styling */
+  .action-item {
+    @apply relative flex items-start gap-4 p-4 rounded-xl transition-all duration-200;
+    @apply bg-muted/50 border border-transparent;
+  }
+  
+  .action-item:hover {
+    @apply bg-muted border-primary/20;
+  }
+  
+  .dark .action-item:hover {
+    box-shadow: 0 0 20px -8px hsl(var(--primary) / 0.15);
+  }
+  
+  .action-number {
+    @apply flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full;
+    @apply bg-primary text-primary-foreground text-sm font-bold;
+  }
+  
+  /* Theme toggle */
+  .theme-toggle {
+    @apply relative h-9 w-16 rounded-full transition-colors duration-300;
+    @apply bg-muted border border-border;
+  }
+  
+  .theme-toggle-thumb {
+    @apply absolute top-1 h-7 w-7 rounded-full transition-all duration-300;
+    @apply bg-foreground shadow-lg;
+  }
+  
+  .theme-toggle[data-state="dark"] .theme-toggle-thumb {
+    @apply translate-x-7;
+  }
+
+  /* Input glow effect */
+  .input-premium {
+    @apply transition-all duration-300;
+  }
+  
+  .input-premium:focus {
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15),
+                0 0 30px -10px hsl(var(--primary) / 0.25);
+  }
+  
+  .dark .input-premium:focus {
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2),
+                0 0 40px -10px hsl(var(--primary) / 0.35);
+  }
+}
+
+/* Risk score circle animation */
+@layer utilities {
+  .score-circle {
+    transition: stroke-dashoffset 1s ease-out;
+  }
+  
+  .score-glow {
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+  
+  .dark .score-glow {
+    filter: drop-shadow(0 0 15px currentColor);
+  }
+}
+
+/* Custom scrollbar */
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Gradient text utility */
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--hero-gradient-via)) 50%,
+      hsl(var(--hero-gradient-to)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Subtle grid background */
+  .bg-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .dark .bg-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+  }
+}
